@@ -1,0 +1,147 @@
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+
+html,
+body
+#background {
+    width:100vw;
+    min-height:100vh;
+    background: linear-gradient(55deg, #cc2b5e,#753a88);
+
+}
+
+.container {
+    width:100%;
+    min-height: 100vh;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.container h1 {
+    text-align:center;
+    font-size:40px;
+}
+
+.dashboard {
+    width:100%;
+    position:absolute;
+    align-items:center;
+    top:70px;
+    right:475px;    
+    max-width: 500px;
+    background:#fff;
+    padding:50px; 
+    margin-bottom:100px;
+    margin-left:30px;
+    border-radius:10px; /*makes buttons curved and the to-do-list area less ugly*/
+}
+
+.dashboard h2 {
+align-items:center;
+display:flex;
+}
+
+.dashboard h2 img{ /*separate css tag for the icon*/
+    align-items:center;
+    width:40px;
+    height:40px;
+}
+
+.row {
+    display:flex;
+    font-family:'Gill Sans', sans-serif;
+    align-items: center;
+    justify-content: space-between; /*aligns button with input box*/
+    background:#edeef0;
+    border-radius:12px; 
+    bottom:50px;
+}
+
+input {
+    flex:1;
+    border:none;
+    font-family:'Gill Sans', sans-serif;
+    outline:none;
+    background:transparent;
+    padding:10px;
+    font-weight:14px;
+}
+
+
+.addButton{
+    border:none;
+    outline:none;
+    border-radius:10px;
+    padding: 10px 40px;
+    font-family:'Gill Sans', sans-serif;
+    background: linear-gradient(135deg, #D4145A, #FBB03B);
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    user-select: none;
+    padding:12px 10px 8px 9px;
+    position:relative;
+}
+
+ul li::before{
+    content: '';
+    position:absolute;
+    height:28px;
+    width:28px;
+    border-radius:50%;
+    background-image:url(images/unchecked\ box.svg);
+    background-size: cover;
+    background-position:center;
+    right:400px;
+    bottom:4px;
+}
+
+ul li.checked {
+    text-decoration:line-through;
+    cursor:pointer;
+}
+
+ul li.checked::before {
+    text-decoration:line-through;
+    background-image:url(images/checked.jpg);
+    cursor:pointer;
+}
+
+.deleteButton {
+    background: linear-gradient(45deg, #FF512F, #DD2476);
+    border-radius:10%;
+    border:none;
+    outline:none;
+    padding: 5px 10px;
+    position:absolute;
+    right:40px;
+    cursor:pointer; 
+    bottom:5px; 
+}
+
+.editButton {
+    background: linear-gradient(45deg, #009245, #FCEE21);
+    border-radius:10%;
+    border:none;
+    outline:none;
+    padding: 5px 10px;
+    position:absolute;
+    right:-10px;
+    cursor:pointer; 
+    bottom:5px; 
+}
+
+.how-to {
+    font-family:'Gill Sans';
+    position:absolute;
+    text-align:right;
+    right:275px;
+    top:300px;
+    color:black;    
+    display:block;
+    visibility:visible;
+}
